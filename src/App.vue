@@ -8,7 +8,8 @@
     <Jeff />
     <completo />
     <Hello  />
-
+    <Tabs />
+    <Swicht/>
    
   </div>
 </template>
@@ -19,13 +20,18 @@
 import Jeff from './components/jeff.vue';
 import completo from './components/completo.vue';
 import Hello from './components/hello.vue';
+import Tabs from './components/tabs.vue'
+import Swicht from './components/swicht.vue'
+
 
 export default {
 
   components: {
     Jeff,  // Registrar el componente aquí
     completo,
-    Hello
+    Hello,
+    Tabs,
+    Swicht
   },
 
 
