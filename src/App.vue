@@ -1,20 +1,11 @@
 <template>
-  <div class="bg-gray-900 min-h-screen flex flex-col text-white items-center justify-center">
-    <h1>{{ jeffmensaje }}</h1>
-    <button @click="Changevue">Cambiar a vue</button>
-    <button @click="Changereact">Cambiar a react</button>
-    <button @click="Reset">reset</button>
-    <!-- Usar el componente jeff aquí -->
-    <Jeff />
-    <completo />
-    <Hello  />
-    <Tabs />
-    <Swicht/>
+  <div class="bg-gray-950 h-full flex flex-col text-white items-center justify-center w-full">
+    <Navbar/>
+    <!-- Aquí se renderizarán las vistas según la ruta -->
+    <router-view></router-view>
    
   </div>
 </template>
-
-
 
 <script>
 import Jeff from './components/jeff.vue';
@@ -22,16 +13,19 @@ import completo from './components/completo.vue';
 import Hello from './components/hello.vue';
 import Tabs from './components/tabs.vue'
 import Swicht from './components/swicht.vue'
+import Navbar from './components/navbart.vue'
 
 
 export default {
 
+  name: 'App',
   components: {
     Jeff,  // Registrar el componente aquí
     completo,
     Hello,
     Tabs,
-    Swicht
+    Swicht,
+    Navbar
   },
 
 
@@ -52,6 +46,7 @@ export default {
       this.jeffmensaje = this.welcome;
     },
   },
+  
 
 };
 </script>
